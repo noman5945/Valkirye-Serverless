@@ -11,16 +11,31 @@
     "cdk": "cdk"
   },
   "devDependencies": {
+    "@nestjs/cli": "^11.0.23",
+    "@nestjs/testing": "^11.1.27",
+    "@types/aws-lambda": "^8.10.162",
     "@types/jest": "^30",
     "@types/node": "^24.10.1",
+    "aws-cdk": "2.1100.2",
     "jest": "^30",
     "ts-jest": "^29",
-    "aws-cdk": "2.1100.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.9.3"
   },
   "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.33.1",
+    "@aws-lambda-powertools/tracer": "^2.33.1",
+    "@aws-sdk/client-cognito-identity-provider": "^3.1073.0",
+    "@aws-sdk/client-dynamodb": "^3.1073.0",
+    "@aws-sdk/client-secrets-manager": "^3.1073.0",
+    "@aws-sdk/lib-dynamodb": "^3.1073.0",
+    "@codegenie/serverless-express": "^5.0.0",
+    "@nestjs/common": "^11.1.27",
+    "@nestjs/core": "^11.1.27",
+    "@nestjs/platform-express": "^11.1.27",
     "aws-cdk-lib": "^2.232.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
     "constructs": "^10.0.0"
   }
 }
