@@ -33,7 +33,9 @@ export class DatabaseStack extends cdk.Stack {
       sortKey: { name: "SK", type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       encryption: dynamodb.TableEncryption.AWS_MANAGED, // NFR-1.5
-      pointInTimeRecovery: true, // NFR-3.2
+      pointInTimeRecoverySpecification: {
+        pointInTimeRecoveryEnabled: true,
+      }, // NFR-3.2
       timeToLiveAttribute: "ttl", // FR-2.6 — undelivered messages, WsConnection cleanup
       removalPolicy: cdk.RemovalPolicy.RETAIN, // never auto-delete — GDPR durability
     });
